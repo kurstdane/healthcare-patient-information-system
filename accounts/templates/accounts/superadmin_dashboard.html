@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>SuperAdmin Dashboard</h1>
+  <ul>
+    <li><a href="{% url 'create_user' %}?role=admin">Create Admin</a></li>
+    <li><a href="{% url 'create_user' %}?role=doctor">Create Doctor</a></li>
+  </ul>
+{% endblock %}
