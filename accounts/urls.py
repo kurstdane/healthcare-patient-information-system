@@ -7,7 +7,7 @@ from .views import (
 
 urlpatterns = [
     path('login/', RoleBasedLoginView.as_view(), name='login'),
-    path('superadmin/', superadmin_dashboard, name='superadmin_dashboard'),
+    path('superadmin/', superadmin_dashboard, name='super_admin_dashboard'),
     path('admin/', admin_dashboard, name='admin_dashboard'),
     path('doctor/', doctor_dashboard, name='doctor_dashboard'),
     path('create-user/', create_user, name='create_user'),
