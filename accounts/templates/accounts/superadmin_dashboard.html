@@ -3,7 +3,9 @@
 {% block content %}
   <h1>SuperAdmin Dashboard</h1>
   <ul>
-    <li><a href="{% url 'create_user' %}?role=admin">Create Admin</a></li>
-    <li><a href="{% url 'create_user' %}?role=doctor">Create Doctor</a></li>
+    <li><a href="{% url 'accounts:create_user' %}?role=admin">Create Admin</a></li>
+    <li><a href="{% url 'accounts:create_user' %}?role=doctor">Create Doctor</a></li>
   </ul>
+  <p><a href="{% url 'accounts:edit_profile' %}">Edit Profile</a></p>
+  <p><strong>Last Updated:</strong> {{ user.last_updated|date:"F j, Y, g:i A" }}</p>
 {% endblock %}
